@@ -1,0 +1,63 @@
+.admin-dashboard {
+    width: 100%;
+  }
+  
+  .dashboard-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #1f2937;
+  }
+  
+  .dashboard-loading {
+    font-size: 18px;
+    padding: 40px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+  }
+  
+  .stat-card {
+    padding: 25px;
+    border-radius: 14px;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .stat-card h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    opacity: 0.9;
+  }
+  
+  .stat-card h2 {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  /* Gradient Themes */
+  
+  .blue {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+  }
+  
+  .green {
+    background: linear-gradient(135deg, #16a34a, #166534);
+  }
+  
+  .orange {
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+  }
+  
+  .purple {
+    background: linear-gradient(135deg, #7c3aed, #4c1d95);
+  }

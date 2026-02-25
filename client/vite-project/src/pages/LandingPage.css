@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .hospital-landing {
+    background: #f5f9ff;
+  }
+  
+  /* Navbar */
+  .hospital-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .hospital-navbar button {
+    background: #0d6efd;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .hospital-navbar button:hover {
+    background: #084298;
+  }
+  
+  /* Hero */
+  .hospital-hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-overlay p {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  
+  .primary-btn {
+    background: #0d6efd;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .primary-btn:hover {
+    background: #084298;
+  }
+  
+  /* Sections */
+  section {
+    padding: 70px 8%;
+  }
+  
+  section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0d6efd;
+  }
+  
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Trust */
+  .trust-section {
+    background: #eaf3ff;
+    text-align: center;
+    padding: 50px 8%;
+  }
+  
+  /* About */
+  .about-section {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Footer */
+  .hospital-footer {
+    background: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero-overlay h1 {
+      font-size: 30px;
+    }
+  }
+
+
+
+
+
+
+
+
+  
+  /* DOCTORS SECTION */
+  .doctors {
+    padding: 80px 10%;
+    text-align: center;
+    background: white;
+  }
+  
+  .doctors h2 {
+    font-size: 34px;
+    margin-bottom: 50px;
+    color: #003366;
+  }
+  
+  .doctor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .doctor-card {
+    background: #f8fbff;
+    padding: 25px;
+    width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .doctor-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+  
+  .doctor-card h4 {
+    margin: 10px 0 5px;
+  }
+  
+  .doctor-card p {
+    color: #0077b6;
+    font-weight: 500;
+  }
+  
+  .doctor-card span {
+    font-size: 14px;
+    color: #555;
+  }
+  

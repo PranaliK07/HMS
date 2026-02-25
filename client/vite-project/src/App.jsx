@@ -1,32 +1,38 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import PatientDashboard from "./pages/Patient/PatientDashboard";
 
-// Admin Pages
-import AddDoctor from "./pages/Admin/AddDoctor";
-import ManageDoctor from "./pages/Admin/ManageDoctor";
-import AddStaff from "./pages/Admin/AddStaff";
-import ManageStaff from "./pages/Admin/ManageStaff";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import DoctorDashboard from "./pages/Doctor/DoctorDasboard";
+import Register from "./pages/Register";
+
+
+
+// import ReceptionDashboard from "./pages/reception/ReceptionDashboard";
+// import BillingDashboard from "./pages/billing/BillingDashboard";
+
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
 
-      <Route
-        path="/dashboard"
-        element={<ProtectedRoute><Dashboard /></ProtectedRoute>}
-      />
+      
+    
+<Route path="/doctor/dashboard" element={<DoctorDashboard />} />
+<Route path="/patient/dashboard" element={<PatientDashboard />} />
+<Route path="/admin/dashboard" element={<AdminDashboard />} />
+<Route path="/register" element={<Register />} />
+{/* <Route path="/Reception/ReceptionDashboard" element={<ReceptionDashboard />} /> */}
+{/* <Route path="/billing/dashboard" element={<BillingDashboard />} /> */}
 
-      <Route
-        path="/admin/manage-doctors"
-        element={<ProtectedRoute><ManageDoctor /></ProtectedRoute>}
-      />
 
-      <Route path="*" element={<h1>Page Not Found</h1>} />
+          
+
+      
     </Routes>
   );
 }

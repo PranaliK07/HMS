@@ -1,18 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const {
-  addAdmin,
-  getAllAdmins,
-  getAdmin,
-  updateAdmin,
-  deleteAdmin,
-} = require("../controllers/adminController");
 
-// Routes
-router.post("/add", addAdmin);
-router.get("/", getAllAdmins);
-router.get("/:id", getAdmin);
-router.put("/:id", updateAdmin);
-router.delete("/:id", deleteAdmin);
+const adminController = require("../controllers/adminController");
+const { verifyToken } = require("../middleware/authMiddleware");
+
+// Protect this route using JWT
+router.get("/stats", verifyToken, adminController.getStats);
 
 module.exports = router;

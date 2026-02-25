@@ -1,20 +1,33 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { logout } from "../services/authService";
+import { Navbar as BSNavbar, Container, Nav, Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    logout();
-    navigate("/login");
-  };
-
   return (
-    <nav style={{ padding: "10px", backgroundColor: "#333", color: "#fff" }}>
-      <Link to="/dashboard" style={{ marginRight: "20px", color: "#fff" }}>Dashboard</Link>
-      <button onClick={handleLogout}>Logout</button>
-    </nav>
+    <BSNavbar bg="light" expand="lg" className="shadow-sm">
+      <Container fluid>
+        <BSNavbar.Brand as={Link} to="/dashboard">
+          Hospital Management System
+        </BSNavbar.Brand>
+
+        <Nav className="ms-auto">
+          <Dropdown align="end">
+            <Dropdown.Toggle variant="secondary" id="admin-dropdown">
+              Admin
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item as={Link} to="/profile">
+                Profile
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/logout">
+                Logout
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Nav>
+      </Container>
+    </BSNavbar>
   );
 };
 

@@ -1,0 +1,87 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* SIDEBAR */
+  .sidebar {
+    width: 240px;
+    background: #0d1b2a;
+    color: white;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sidebar a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover,
+  .sidebar a.active {
+    background: #1b263b;
+    color: white;
+  }
+  
+  /* MAIN */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f1f5f9;
+  }
+  
+  /* HEADER */
+  .header {
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .logout-btn {
+    padding: 8px 16px;
+    background: #e63946;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background: #c1121f;
+  }
+  
+  /* CONTENT */
+  .content {
+    padding: 25px;
+    overflow-y: auto;
+  }
+
+
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }

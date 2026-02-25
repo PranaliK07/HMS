@@ -1,18 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 const Sidebar = () => {
   return (
-    <div style={{ width: "200px", background: "#eee", padding: "10px" }}>
-      <h3>Menu</h3>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/admin/add-doctor">Add Doctor</Link></li>
-        <li><Link to="/admin/manage-doctors">Manage Doctors</Link></li>
-        <li><Link to="/patient">Patients</Link></li>
-        <li><Link to="/staff">Staff</Link></li>
-        <li><Link to="/appointments">Appointments</Link></li>
-      </ul>
+    <div
+      className="d-flex flex-column bg-dark text-white vh-100 p-3"
+      style={{ width: "220px" }}
+    >
+      <h3 className="text-center mb-4">HMS</h3>
+      <Nav className="flex-column">
+        <Nav.Link className="text-white mb-2">Dashboard</Nav.Link>
+        <Nav.Link className="text-white mb-2">Patients</Nav.Link>
+        <Nav.Link className="text-white mb-2">Doctors</Nav.Link>
+        <Nav.Link className="text-white mb-2">Staff</Nav.Link>
+        <Nav.Link className="text-white mb-2">Billing</Nav.Link>
+        <Nav.Link className="text-white mb-2">Reports</Nav.Link>
+      </Nav>
     </div>
   );
 };

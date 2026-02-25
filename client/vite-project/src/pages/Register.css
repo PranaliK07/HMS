@@ -1,0 +1,107 @@
+/* Container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    min-height: 100vh; /* keeps it full screen but card centered */
+    box-sizing: border-box;
+  }
+  
+  /* Card */
+  .register-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 400px; /* compact width */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  /* Title */
+  .register-box h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1f4037;
+    margin-bottom: 20px;
+  }
+  
+  /* Form groups */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  /* Labels */
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Inputs and Select */
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #1f4037;
+    box-shadow: 0 0 6px rgba(31, 64, 55, 0.3);
+  }
+  
+  /* Error messages */
+  .error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 3px;
+  }
+  
+  /* Success message */
+  .success {
+    color: #27ae60;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  /* Register Button */
+  .register-btn {
+    width: 100%;
+    padding: 12px 0;
+    background: #1f4037;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .register-btn:hover {
+    background: #3c6e55;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .register-box {
+      padding: 25px 20px;
+    }
+    .register-box h2 {
+      font-size: 22px;
+    }
+  }
